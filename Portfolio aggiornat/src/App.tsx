@@ -18,7 +18,7 @@ import {
   ArrowUpRight
 } from 'lucide-react';
 import { projectsData, site, type MediaItem, type Project } from './data/projects';
-import { getDriveEmbedUrl, getYoutubeId, getThumbnailUrl } from './lib/media';
+import { getDriveEmbedUrl, getDriveId, getYoutubeId, getThumbnailUrl, getInstagramEmbedUrl } from './lib/media';
 
 type Page = 'home' | 'digital-art' | 'visual';
 
@@ -668,7 +668,7 @@ function LightboxMediaPlayer({ item }: { item: MediaItem }) {
     if (yId) {
       return (
         <iframe
-          src={`https://www.youtube.com/embed/${yId}?autoplay=1&rel=0`}
+          src={`https://www.youtube.com/embed/${yId}?autoplay=1&rel=0&loop=1&playlist=${yId}&playsinline=1`}
           className="w-full h-full aspect-video border-0"
           allow="autoplay; encrypted-media; picture-in-picture"
           allowFullScreen
@@ -702,14 +702,28 @@ function LightboxMediaPlayer({ item }: { item: MediaItem }) {
   }
 
   if (item.type === 'instagram') {
+    const embed = getInstagramEmbedUrl(item.url);
+    if (embed) {
+      return (
+        <div className="w-full h-full flex items-center justify-center bg-[#0F0A1A] overflow-auto">
+          <iframe
+            src={embed}
+            className="h-full w-full max-w-[480px] border-0 bg-white"
+            allow="autoplay; encrypted-media; picture-in-picture; clipboard-write"
+            allowFullScreen
+            title={item.caption}
+          />
+        </div>
+      );
+    }
     return (
       <div className="flex flex-col items-center justify-center p-8 text-center bg-[#0F0A1A] w-full h-full select-none">
         <div className="w-16 h-16 rounded-full bg-[#9B3FFF]/12 flex items-center justify-center text-[#9B3FFF] mb-6 shadow-lg animate-pulse">
           <Instagram size={32} />
         </div>
-        <h4 className="font-['Space_Grotesk'] font-bold text-lg text-white mb-2">Instagram Media Integration</h4>
+        <h4 className="font-['Space_Grotesk'] font-bold text-lg text-white mb-2">Storia Instagram</h4>
         <p className="font-['JetBrains_Mono'] text-[11px] text-[#8FA89A] max-w-sm mb-6 leading-relaxed">
-          Instagram non permette di incorporare storie e highlight. Aprilo direttamente su Instagram.
+          Le storie e gli highlight di Instagram non si possono incorporare: aprili direttamente su Instagram.
         </p>
         <a 
           href={item.url} 
@@ -720,6 +734,30 @@ function LightboxMediaPlayer({ item }: { item: MediaItem }) {
           Apri su Instagram ↗
         </a>
       </div>
+    );
+  }
+
+  if (item.type === 'image') {
+    const src = getDriveId(item.url) ? getThumbnailUrl(item, 2400) : item.url;
+    return (
+      <img
+        src={src || item.url}
+        alt={item.caption}
+        referrerPolicy="no-referrer"
+        className="w-full h-full object-contain select-none"
+      />
+    );
+  }
+
+  if (item.type === 'video' && item.embed) {
+    return (
+      <iframe
+        src={item.embed}
+        className="w-full h-full border-0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowFullScreen
+        title={item.caption}
+      />
     );
   }
 
@@ -917,6 +955,21 @@ function ThumbFallback({ item, small = false }: { item: MediaItem; small?: boole
 
 // Anteprima grande della card: per i formati verticali aggiunge uno sfondo sfocato
 function CardThumbnailPreview({ item }: { item: MediaItem }) {
+  const igEmbed = item.type === 'instagram' && !item.thumb ? getInstagramEmbedUrl(item.url) : null;
+  if (igEmbed) {
+    // Anteprima del post: l'embed viene mostrato senza interazione (il clic apre la galleria)
+    return (
+      <div className="w-full h-full overflow-hidden bg-[#0F0A1A] flex justify-center">
+        <iframe
+          src={igEmbed}
+          loading="lazy"
+          tabIndex={-1}
+          className="w-full max-w-[420px] h-[560px] border-0 bg-white pointer-events-none -mt-[56px]"
+          title={item.caption}
+        />
+      </div>
+    );
+  }
   const src = getThumbnailUrl(item, 960);
   if (!src) return <ThumbFallback item={item} />;
   return (
