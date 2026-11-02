@@ -187,7 +187,13 @@ export const projectsData: Record<string, Project[]> = {
           type: 'drive',
           url: 'https://drive.google.com/file/d/1YNeVBb3Sdg8TzsyxomclaZLe07BlPnZX/view?usp=drive_link',
           caption: 'Test Struttura Legno & Displacement 3D'
-        }
+        },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1yf6u_sVjcOhLf4llD5PbGLVxx8RY2RQ_/view', caption: 'Ripresa del pannello 1' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1OCxPZqVorU_vFJ2ICMf6gbNxRuv4a3yc/view', caption: 'Ripresa del pannello 2' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1fIn9A6F64q5ITBa6lVisjw02kGTukR-k/view', caption: 'Ripresa del pannello 3' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/185BsdD5BSgmuo3GtU3SNASX4tkEgfN5J/view', caption: 'Ripresa del pannello 4' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1wUp466QB8Wn47rYNwfPS46W5pdVwxhul/view', caption: 'Ripresa del pannello 5' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1yAKWCmhJmQ6YPZTD0bEfiNhCga7JYa40/view', caption: 'Ripresa del pannello 6' }
       ]
     },
     {
@@ -215,13 +221,16 @@ export const projectsData: Record<string, Project[]> = {
         { type: 'drive', url: 'https://drive.google.com/file/d/1Y98rTq9NssfKkAWVSnpFDx3tEGRspY3V/view?usp=drive_link', caption: 'Shading Materiale Organico / Muschio' },
         { type: 'drive', url: 'https://drive.google.com/file/d/1LDuGwCUIv3JJUDpQ0UMltjSCi599o8tc/view?usp=drive_link', caption: 'Loop 3D Sincronia Ritmica Elevata' },
         { type: 'drive', url: 'https://drive.google.com/file/d/17T1tvr7HmCgvqgYfd3HCqPKVcrPkxkLG/view?usp=drive_link', caption: 'Renders di Prova ad Alta Risoluzione' },
-        { type: 'drive', url: 'https://drive.google.com/file/d/1PgCNBQ9suqs3uBJqxtL3Nj8FzgyvjvzZ/view?usp=drive_link', caption: 'Compositing in DaVinci Resolve' },
         { type: 'drive', url: 'https://drive.google.com/file/d/1EQ1eYx8anr93g8nfqVQMXNa2LcmvmJut/view?usp=drive_link', caption: 'Workflow di Esportazione Resolume DXV' },
         { type: 'drive', url: 'https://drive.google.com/file/d/1akRLQmP9Pd5unYE8b9cW9DNg-mG9w4EC/view?usp=drive_link', caption: 'Sviluppo Scheletro osseo 3D' },
         { type: 'drive', url: 'https://drive.google.com/file/d/11E0lcoQoCFgJKfEQ6rFLPJimWlQxQRla/view?usp=drive_link', caption: 'Wireframe del Mesh' },
         { type: 'drive', url: 'https://drive.google.com/file/d/1c6JmvEAnaNg6fkK_0ZUD6InPraEIPif5/view?usp=drive_link', caption: 'WIP Shading Occhi e Volumetrici' },
         { type: 'drive', url: 'https://drive.google.com/file/d/1E3PdyW4eEhDB4ycCy6cXoU7Wyq4p0ycw/view?usp=drive_link', caption: 'Render Camera Spostamento Laterale' },
         { type: 'drive', url: 'https://drive.google.com/file/d/10_cyOqXySEzbzNDOdNQNTL2fjlYHHZpQ/view?usp=drive_link', caption: 'Inquadratura Frontale della Maschera' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1p60GD8AMvwVI8E0IsJamIQKqSoN7i2jR/view', caption: 'Loop render 1' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/18hR9d1P6X4Fr3prP0g9pL5WfOEsM2jmL/view', caption: 'Loop render 2' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/18qW_bFHW9LTAozkhKLPZwZl5ITQLVc0h/view', caption: 'Loop render 3' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1iFvqwdiX6MrqbUVvTrOcIbW7ZYf5Pu_E/view', caption: 'Ripresa dal vivo' },
         {
           type: 'instagram',
           url: 'https://www.instagram.com/stories/highlights/17943591252038971/',
@@ -235,6 +244,11 @@ export const projectsData: Record<string, Project[]> = {
       category: 'Creature Design · Cube Mapping · Gen-Patterns',
       description: 'Concept e produzione 3D completi: un\'entità asimmetrica costruita su un mockup prospettico per creare un\'illusione ottica tridimensionale dentro il grande cubo sospeso sopra la dancefloor. Patch generative in TouchDesigner, guidate dalle frequenze, animano il contorno.',
       media: [
+        { type: 'drive', url: 'https://drive.google.com/file/d/1wbl-MDfgwdt_gqibI6gQqARI7P71TgJ9/view', caption: 'Processo creativo — Frastuono Cube', isProcess: true },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1MpUt1Wrqb_n26aNLkxO8kal-CJIrgJI1/view', caption: 'Loop 0' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1MRYkzD2MJiNYqKqtc-LnES_IxBPP3oVY/view', caption: 'Loop 1' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1CUV2kB4hmWq4tWkVy9ZwN9hytc55di1w/view', caption: 'Loop 2' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1qE3W82Q3uH69D9U-iKXDs7dF-_10rqt9/view', caption: 'Loop 3' },
         {
           type: 'instagram',
           url: 'https://www.instagram.com/stories/highlights/18128791420543132/',
@@ -263,6 +277,13 @@ export const projectsData: Record<string, Project[]> = {
         { type: 'drive', url: 'https://drive.google.com/file/d/1Sud-yfj0TTh0cODKig6BpcWS8dUVor4d/view?usp=drive_link', caption: 'Test Mappatura Angolo Proiezione' },
         { type: 'drive', url: 'https://drive.google.com/file/d/1yqKCEUbuUtQ57SUTQs02P2xtgbbFgpog/view?usp=drive_link', caption: 'Texture Shader Chimico Creatura' },
         { type: 'drive', url: 'https://drive.google.com/file/d/1vvO7VZXKzVxLbtPiBCUqXnPVtfHqO-OF/view?usp=drive_link', caption: 'Dettagli Poligonali Finali' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/11S6lX-l7TikIw8mJI_hhX1I1rxhYSEeN/view', caption: 'Loop render — LED wall 1' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1Ohi-jRWts4lt5xsolFISHAS4DcRctHQi/view', caption: 'Loop render — LED wall 2' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/162sRv6iTUOSpm39Puk7opeG8OtkhRU9x/view', caption: 'Ripresa dal vivo 1' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1NVl823rDx5tDg0Ir1YJmqjKyq6rHbIbz/view', caption: 'Ripresa dal vivo 2' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1GGE4sRcn9gNundR6CuCiC1uQwYwTr_Jw/view', caption: 'Ripresa dal vivo 3' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1ym39zMfvAt3X9PK_HuwAg_3UJVV1udSi/view', caption: 'Ripresa dal vivo 4' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1eFqvMygmz6AwPxp-3U3goBmy38QgOBhb/view', caption: 'Ripresa dal vivo 5' },
         {
           type: 'instagram',
           url: 'https://www.instagram.com/stories/highlights/17869612548545990/',
@@ -285,7 +306,13 @@ export const projectsData: Record<string, Project[]> = {
           type: 'instagram',
           url: 'https://www.instagram.com/stories/highlights/18187184086346967/',
           caption: 'Riprese live — Samurai Visuals per Shameless (Highlights)'
-        }
+        },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1oLRFuAbS3wUuGVE1PkJx4ECZuLPX1eBZ/view', caption: 'Processo creativo — Samurai', isProcess: true },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1UtySM1j7mLdRVIKvATfilGEQzFPpOVid/view', caption: 'Ripresa dal vivo 1' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/13moT2zTZwHM9vLfchlqMEQ62ie8CBp03/view', caption: 'Ripresa dal vivo 2' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1kNw_ja6bmb-EB9FvBqJ779TQuDtfn5sH/view', caption: 'Ripresa dal vivo 3' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1Fyhv3bbn292h_wtY4UwPPYEasv7bNtfi/view', caption: 'Ripresa dal vivo 4' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/116JyMvbHwej7FYwgnhH1NWHfkC1rAa5a/view', caption: 'Ripresa dal vivo 5' }
       ]
     },
     {
@@ -361,6 +388,21 @@ export const projectsData: Record<string, Project[]> = {
       ]
     },
     {
+      id: 'shameless-live',
+      title: 'Shameless — Live',
+      category: 'Live Visuals · Riprese dal vivo',
+      description: 'Riprese dal vivo dei visual durante le serate Shameless, compresa l\'edizione di Natale.',
+      media: [
+        { type: 'drive', url: 'https://drive.google.com/file/d/1VydZ1cNJW-JYKOMbxf9o0UAnb65M5su7/view', caption: 'Shameless — ripresa 1' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1aULGavAT_L3-2nxLDLdnw-jENw8fBPg-/view', caption: 'Shameless — ripresa 2' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1kkijV7xhLMl_KxPrkTPuD0EDOyvjHND1/view', caption: 'Shameless — ripresa 3' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1HGnaG7WY8MTMDdklEnaJCQsFU9Gb_JFb/view', caption: 'Shameless — ripresa 4' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/14oB3mAfvT93FlnZ9fkotCGOOBuc4G855/view', caption: 'Shameless Natale — ripresa 1' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/137q7HkrElp8XYzYQ5r8l1_dSZ3OtjoOP/view', caption: 'Shameless Natale — ripresa 2' },
+        { type: 'drive', url: 'https://drive.google.com/file/d/1ccgqllIf6W8KJmOvsPCH3uYwx0BcjmGm/view', caption: 'Shameless Natale — ripresa 3' }
+      ]
+    },
+    {
       id: 'visual-grandi-eventi',
       title: 'Visual per Grandi Eventi',
       category: 'Physics Simulation · Electronic Scenic Loops',
@@ -426,11 +468,7 @@ export const projectsData: Record<string, Project[]> = {
       category: 'Kinect Depth · Glitch Aesthetics · TouchDesigner · Digital Mirror',
       description: 'Uno specchio digitale disturbato e meditativo. In TouchDesigner i dati di profondità del Kinect diventano vettori che generano distorsioni video e glitch cromatici controllati. La fisicità dello spettatore modula la densità estetica dell\'installazione.',
       media: [
-        {
-          type: 'video',
-          url: 'https://1drv.ms/v/c/9e659d20fb4022e9/IQDNndOY0gEiSoNl2bIbseRxAZ0vzmhbWewWZ2PQbpv3kWQ?e=y8cgJi',
-          caption: 'Video patch — Reactive Glitches demo (Link Interno)'
-        }
+        { type: 'drive', url: 'https://drive.google.com/file/d/1JOFs-4Wh-NuwNiGtLOgyVzIsLnEsqBFD/view', caption: 'Reactive Glitches — demo' }
       ]
     },
     {
