@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #080B0A;
+  --bg-card: #0B0F0D;
+  --bg-surface: #111A16;
+  --cyan: #00FF88;
+  --violet: #9B3FFF;
+  --cyan-dim: rgba(0, 255, 136, 0.08);
+  --violet-dim: rgba(155, 63, 255, 0.10);
+  --text: #E4EDE8;
+  --text-muted: #5E7568;
+  --text-dim: #8FA89A;
+  --border: rgba(0, 255, 136, 0.15);
+  --border-soft: rgba(255, 255, 255, 0.04);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--cyan);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--violet);
+}
+
+/* Animations */
+@keyframes scanLine {
+  0% { top: 0%; opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+@keyframes glitchIn {
+  0% { opacity: 0; transform: translateY(10px) skewX(-2deg); }
+  60% { opacity: 1; transform: translateY(0) skewX(0deg); }
+  62% { transform: skewX(3deg); }
+  64% { transform: skewX(0deg); }
+  100% { opacity: 1; transform: none; }
+}
+
+@keyframes grid-drift {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.15; transform: scale(1) translateX(-50%); }
+  50% { opacity: 0.25; transform: scale(1.08) translateX(-50%); }
+}
+
+.animate-scan {
+  animation: scanLine 3s ease-in-out infinite;
+}
+
+.animate-grid {
+  animation: grid-drift 10s linear infinite;
+}
+
+.animate-glow {
+  animation: glow-pulse 6s ease-in-out infinite;
+}
+
+.animate-glitch {
+  animation: glitchIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Utilities */
+.text-stroke-cyan {
+  -webkit-text-stroke: 1px rgba(0, 255, 136, 0.4);
+}
+
+.custom-grid {
+  background-image: linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px), 
+                    linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Scrollbar Hide Utility */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
